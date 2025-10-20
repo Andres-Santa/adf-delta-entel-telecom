@@ -1,0 +1,55 @@
+{
+	"name": "DelimitedText1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "la_sa_raw_entel2",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "BRONZE"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "llamadas.csv",
+				"fileSystem": "raw-entel"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "DESCRIPCION",
+				"type": "String"
+			},
+			{
+				"name": "TIPO",
+				"type": "String"
+			},
+			{
+				"name": "NUMERO_ORIGEN",
+				"type": "String"
+			},
+			{
+				"name": "NUMERO_DESTINO",
+				"type": "String"
+			},
+			{
+				"name": "FECHA",
+				"type": "String"
+			},
+			{
+				"name": "HORA",
+				"type": "String"
+			},
+			{
+				"name": "DURACION",
+				"type": "String"
+			}
+		]
+	}
+}
