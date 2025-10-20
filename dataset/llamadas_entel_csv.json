@@ -1,8 +1,8 @@
 {
-	"name": "DelimitedText1",
+	"name": "llamadas_entel_csv",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "la_sa_raw_entel2",
+			"referenceName": "ls_sa_raw_entel",
 			"type": "LinkedServiceReference"
 		},
 		"folder": {
@@ -12,9 +12,9 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
+				"type": "AzureBlobStorageLocation",
 				"fileName": "llamadas.csv",
-				"fileSystem": "raw-entel"
+				"container": "raw-entel"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
